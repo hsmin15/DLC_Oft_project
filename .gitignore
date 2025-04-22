@@ -1,0 +1,13 @@
+# ignore data
+data/
+*.mp4
+*.wav
+
+# ignore weight
+*.pt
+*.h5
+
+# etc
+__pycache__/
+.env
+.DS_Store

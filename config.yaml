@@ -1,0 +1,133 @@
+# Project definitions (do not edit)
+Task: deeplabcut test
+scorer: GEO
+date: Apr6
+multianimalproject: false
+identity:
+
+
+# Project path (change when moving around)
+project_path: /Users/hanseongmin/Desktop/deeplabcut test-GEO-2025-04-06
+
+
+# Default DeepLabCut engine to use for shuffle creation (either pytorch or tensorflow)
+engine: pytorch
+
+
+# Annotation data set configuration (and individual video cropping parameters)
+video_sets:
+  C:\Users\geoth\Desktop\deeplabcut test-GEO-2025-04-06\videos\A1G.mp4:
+    crop: 0, 1920, 0, 1080
+  C:\Users\geoth\Desktop\deeplabcut test-GEO-2025-04-06\videos\A1O.mp4:
+    crop: 0, 1920, 0, 1080
+  C:\Users\geoth\Desktop\deeplabcut test-GEO-2025-04-06\videos\B1G.mp4:
+    crop: 0, 1920, 0, 1080
+  C:\Users\geoth\Desktop\deeplabcut test-GEO-2025-04-06\videos\B1O.mp4:
+    crop: 0, 1920, 0, 1080
+bodyparts:
+- nose
+- left_ear
+- right_ear
+- head
+- neck
+- left_center
+- center
+- right_center
+- left_butt
+- right_butt
+- tail_start
+- tail_mid
+- tail_end
+
+
+# Fraction of video to start/stop when extracting frames for labeling/refinement
+
+
+# Fraction of video to start/stop when extracting frames for labeling/refinement
+
+
+# Fraction of video to start/stop when extracting frames for labeling/refinement
+start: 0
+stop: 1
+numframes2pick: 20
+
+
+# Plotting configuration
+skeleton:
+- - head
+  - neck
+- - neck
+  - center
+- - nose
+  - right_ear
+- - left_ear
+  - head
+- - center
+  - left_butt
+- - neck
+  - left_center
+- - left_center
+  - center
+- - nose
+  - left_ear
+- - right_butt
+  - tail_start
+- - tail_start
+  - tail_mid
+- - right_center
+  - right_butt
+- - center
+  - right_center
+- - center
+  - tail_start
+- - neck
+  - right_center
+- - left_center
+  - left_butt
+- - nose
+  - head
+- - left_butt
+  - tail_start
+- - right_ear
+  - head
+- - tail_mid
+  - tail_end
+- - center
+  - right_butt
+skeleton_color: black
+pcutoff: 0.6
+dotsize: 12
+alphavalue: 0.7
+colormap: rainbow
+
+
+# Training,Evaluation and Analysis configuration
+TrainingFraction:
+- 0.95
+iteration: 0
+default_net_type: resnet_50
+default_augmenter: default
+snapshotindex: -1
+detector_snapshotindex: -1
+batch_size: 8
+detector_batch_size: 1
+
+
+# Cropping Parameters (for analysis and outlier frame detection)
+cropping: false
+#if cropping is true for analysis, then set the values here:
+x1: 0
+x2: 640
+y1: 277
+y2: 624
+
+
+# Refinement configuration (parameters from annotation dataset configuration also relevant in this stage)
+corner2move2:
+- 50
+- 50
+move2corner: true
+
+
+# Conversion tables to fine-tune SuperAnimal weights
+SuperAnimalConversionTables:
